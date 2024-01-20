@@ -1,29 +1,34 @@
-
-### first clone this repo
+## Google Image Downloader
+### Quick Start
+1. Clone the Repository
 ```
-git clone 
+git clone https://github.com/samiabat/google-image-downloader
 ```
-
-### next install dependecies
+2. Install Dependencies
 ```
 pip install -r requirements.txt
 ```
-### in the example below we will pass on the keyword 'cat' and we will limit the number of images to be downloaded to only 10</br>
-```
-from pygoogle_image import image as pi
-
-pi.download(keywords='cat', limit=10)
-```
-### if you don't specify a directory, pygoogle_image will create a folder called image at the root of the project. if you wish you can save it in a specific directory</br>
-```
-pi.download(keywords='cat', limit=10, directory='c:\image')
-```
-
-### if you want to download specific number of images of with some keyboard
-just open download_image.py and edit the keyboard and the limit and then
-
+## Usage
+### Download Images Using Code
+To download images programmatically, use the provided Python script.
+Open the Python script download_image.py.
+Edit the keywords and limit parameters based on your preferences.
+Run the script:
 ```
 python download_image.py
 ```
+Example
+```
+from pygoogle_image import image as pi
+```
 
-# google-image-downloader
+
+# Download images with specified keyword and limit
+```
+pi.download(keywords='cat', limit=10)
+```
+
+# Specify a custom directory for saving images
+```
+pi.download(keywords='cat', limit=10, directory='c:\image')
+```
