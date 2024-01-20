@@ -4,6 +4,10 @@
 ```
 git clone https://github.com/samiabat/google-image-downloader
 ```
+2. Go to the folder 
+```
+cd google-image-downloader
+```
 2. Install Dependencies
 ```
 pip install -r requirements.txt
