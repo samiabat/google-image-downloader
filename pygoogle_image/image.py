@@ -72,6 +72,7 @@ def download(keywords, limit, directory='', extensions={'.jpg', '.png', '.ico', 
         main_directory = "images/"
 
     i = 0
+    limit += 3
 
     things = len(keyword_to_search) * limit
 
@@ -122,7 +123,7 @@ def download(keywords, limit, directory='', extensions={'.jpg', '.png', '.ico', 
                         raise ValueError()
                     if j+1 > 2: # solves the issue of first two images (ignore them)
                     # not sure why that happens, but a temporary solution while saving the images.
-                        file_name = str(keyword_to_search[i]) + "_" + str(j + 1) + ".png"
+                        file_name = str(keyword_to_search[i]) + "_" + str(j - 2) + ".png"
                         with open(os.path.join(path, file_name), 'wb') as file:
                             file.write(r.content)
                     bar.update(bar.currval + 1)
